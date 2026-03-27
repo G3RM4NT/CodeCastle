@@ -1,0 +1,240 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\worktestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:worktestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\models\\compradetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\compradetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\work-test\\worktestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "Controllers\\ProductosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T04:22:47.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WorkTestAPI",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\WorkTestAPI.csproj",
+              "RelativeDocumentMoniker": "WorkTestAPI.csproj",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\WorkTestAPI.csproj",
+              "RelativeToolTip": "WorkTestAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-27T04:15:29.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-27T03:41:36.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAxwC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:25:32.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:24:25.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VentaDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\VentaDetalle.cs",
+              "RelativeDocumentMoniker": "Models\\VentaDetalle.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\VentaDetalle.cs",
+              "RelativeToolTip": "Models\\VentaDetalle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:23:26.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "Models\\Venta.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Venta.cs",
+              "RelativeToolTip": "Models\\Venta.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAEwAkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:23:03.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompraDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\CompraDetalle.cs",
+              "RelativeDocumentMoniker": "Models\\CompraDetalle.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\CompraDetalle.cs",
+              "RelativeToolTip": "Models\\CompraDetalle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:21:52.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Compra.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Compra.cs",
+              "RelativeDocumentMoniker": "Models\\Compra.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Compra.cs",
+              "RelativeToolTip": "Models\\Compra.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAEwAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:21:04.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:20:33.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Proveedor.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Proveedor.cs",
+              "RelativeDocumentMoniker": "Models\\Proveedor.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Proveedor.cs",
+              "RelativeToolTip": "Models\\Proveedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:20:03.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\Work-Test\\WorkTestAPI\\Models\\Producto.cs",
+              "RelativeToolTip": "Models\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T03:18:23.85Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

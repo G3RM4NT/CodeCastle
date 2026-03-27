@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "2kwMqklxdL2Dd+2YudDCv+jXuF8x4EYfwwtvB7cr20I=",
+  "Source": "WorkTestAPI",
+  "BasePath": "_content/WorkTestAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,25 @@
+## [ Visual Studio ]
+.vs/
+[Bb]in/
+[Obj]/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.cache
+
+## [ .NET Core ]
+project.lock.json
+project.fragment.lock.json
+artifacts/
+out/
+
+## [ Secretos y Configuración Local ]
+appsettings.Development.json
+UserSecrets/
+*.pfx
+*.publishsettings
+
+## [ Otros ]
+.DS_Store
+Thumbs.db
