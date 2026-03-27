@@ -24,7 +24,7 @@ namespace WorkTestAPI
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
             builder.Services.AddScoped<IProductoService, ProductoService>();
-
+            builder.Services.AddScoped<CompraService>();
 
             var app = builder.Build();
 

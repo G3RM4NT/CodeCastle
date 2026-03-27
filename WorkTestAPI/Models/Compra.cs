@@ -7,6 +7,10 @@
         public DateTime Fecha { get; set; }
         public int? UsuarioId { get; set; }
 
-        public List<CompraDetalle> Detalles { get; set; } = new();
+        
+        public Proveedor Proveedor { get; set; }
+
+        
+        public List<CompraDetalle> Detalles { get; set; } 
     }
 }

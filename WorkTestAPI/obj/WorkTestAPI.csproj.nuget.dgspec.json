@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Implementacion-PH\\Desktop\\Work-Test-Code-Castle-\\WorkTestAPI\\WorkTestAPI.csproj": {}
+    "C:\\Users\\Implementacion-PH\\Desktop\\CodeCastle\\WorkTestAPI\\WorkTestAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Implementacion-PH\\Desktop\\Work-Test-Code-Castle-\\WorkTestAPI\\WorkTestAPI.csproj": {
+    "C:\\Users\\Implementacion-PH\\Desktop\\CodeCastle\\WorkTestAPI\\WorkTestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Implementacion-PH\\Desktop\\Work-Test-Code-Castle-\\WorkTestAPI\\WorkTestAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Implementacion-PH\\Desktop\\CodeCastle\\WorkTestAPI\\WorkTestAPI.csproj",
         "projectName": "WorkTestAPI",
-        "projectPath": "C:\\Users\\Implementacion-PH\\Desktop\\Work-Test-Code-Castle-\\WorkTestAPI\\WorkTestAPI.csproj",
+        "projectPath": "C:\\Users\\Implementacion-PH\\Desktop\\CodeCastle\\WorkTestAPI\\WorkTestAPI.csproj",
         "packagesPath": "C:\\Users\\Implementacion-PH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Implementacion-PH\\Desktop\\Work-Test-Code-Castle-\\WorkTestAPI\\obj\\",
+        "outputPath": "C:\\Users\\Implementacion-PH\\Desktop\\CodeCastle\\WorkTestAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Implementacion-PH\\AppData\\Roaming\\NuGet\\NuGet.Config",
