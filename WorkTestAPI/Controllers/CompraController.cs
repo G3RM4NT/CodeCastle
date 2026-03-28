@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WorkTestAPI.Data;
 using WorkTestAPI.DTOS;
-using WorkTestAPI.Models;
 using WorkTestAPI.Services;
-
+using Microsoft.EntityFrameworkCore;
 namespace WorkTestAPI.Controllers
 {
     [ApiController]
@@ -20,54 +18,53 @@ namespace WorkTestAPI.Controllers
             _context = context;
         }
 
-        // 🔍 GET: api/compra (todas las compras)
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             var compras = await _context.Compras
-     .Include(c => c.Proveedor)
-     .Include(c => c.Detalles)
-     .ThenInclude(d => d.Producto)
-     .ToListAsync();
+                .Include(c => c.Proveedor)
+                .Include(c => c.CompraDetalles) // Nombre corregido
+                    .ThenInclude(d => d.Producto)
+                .ToListAsync();
 
             return Ok(compras);
         }
 
-        // 🔍 GET by ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var compra = await _context.Compras
-                .Where(c => c.Id == id)
-                .FirstOrDefaultAsync();
+                .Include(c => c.CompraDetalles)
+                .FirstOrDefaultAsync(c => c.Id == id);
 
-            if (compra == null)
-                return NotFound();
-
+            if (compra == null) return NotFound();
             return Ok(compra);
         }
 
-        // ➕ POST (crear compra)
         [HttpPost]
         public async Task<IActionResult> CrearCompra(CompraDTO dto)
         {
-            await _service.RegistrarCompra(dto);
-            return Ok("Compra registrada correctamente ");
+            try
+            {
+                await _service.RegistrarCompra(dto);
+                return Ok("Compra registrada correctamente");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error al registrar: {ex.Message}");
+            }
         }
 
-        // ❌ DELETE (opcional)
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var compra = await _context.Compras.FindAsync(id);
-
-            if (compra == null)
-                return NotFound();
+            if (compra == null) return NotFound();
 
             _context.Compras.Remove(compra);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(); // Gracias a la Cascada, borrará los detalles solo
 
-            return Ok("Compra eliminada");
+            return Ok("Compra y detalles eliminados");
         }
     }
 }

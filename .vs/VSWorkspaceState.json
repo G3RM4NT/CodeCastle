@@ -6,6 +6,6 @@
     "\\WorkTestAPI\\Data",
     "\\WorkTestAPI\\Models"
   ],
-  "SelectedNode": "\\WorkTestAPI\\Program.cs",
+  "SelectedNode": "\\WorkTestAPI\\Controllers\\ProductosController.cs",
   "PreviewInSolutionExplorer": false
 }

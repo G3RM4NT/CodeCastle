@@ -1,25 +1,44 @@
 ## [ Visual Studio ]
 .vs/
 [Bb]in/
-[Obj]/
+[Oo]bj/
 *.user
 *.userosscache
 *.sln.docstates
 *.suo
 *.cache
+*.temp
+*.tmp
 
-## [ .NET Core ]
+## [ .NET / C# ]
+# Ignorar carpetas de compilación
+bin/
+obj/
+publish/
+
+# Ignorar archivos de paquetes y restauración
 project.lock.json
 project.fragment.lock.json
 artifacts/
 out/
+.pnpm-debug.log*
 
 ## [ Secretos y Configuración Local ]
+# MUY IMPORTANTE: No subir configuraciones con contraseñas de DB
 appsettings.Development.json
 UserSecrets/
 *.pfx
 *.publishsettings
+*.db
+*.db-journal
+
+## [ Herramientas de Base de Datos ]
+# Ignorar archivos de logs de SQL Server Express si los usas local
+*.mdf
+*.ldf
+*.sdf
 
 ## [ Otros ]
 .DS_Store
 Thumbs.db
+desktop.ini

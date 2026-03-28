@@ -1,0 +1,29 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using WorkTestAPI.DTOS;
+using WorkTestAPI.Services;
+
+namespace WorkTestAPI.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AuthController : ControllerBase
+    {
+        private readonly AuthService _service;
+
+        public AuthController(AuthService service)
+        {
+            _service = service;
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login(LoginDTO dto)
+        {
+            var token = _service.Login(dto);
+
+            if (token == null)
+                return Unauthorized("Credenciales inválidas");
+
+            return Ok(new { token });
+        }
+    }
+}
