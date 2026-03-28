@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,12 +122,11 @@
               "RelativeToolTip": "Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T03:40:43.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T03:40:43.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -135,12 +134,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T03:20:33.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T03:20:33.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "Services\\AuthService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAhwDUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T03:18:56.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T03:18:56.953Z"
             },
             {
               "$type": "Document",
@@ -161,8 +158,7 @@
               "RelativeToolTip": "DTOS\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T03:17:45.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T03:17:45.247Z"
             },
             {
               "$type": "Document",
@@ -174,8 +170,7 @@
               "RelativeToolTip": "Controllers\\ReporteController.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAwwDIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T03:03:48.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T03:03:48.326Z"
             },
             {
               "$type": "Document",
@@ -187,8 +182,7 @@
               "RelativeToolTip": "Controllers\\VentaController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAqwDoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T02:47:50.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T02:47:50.353Z"
             },
             {
               "$type": "Document",
@@ -200,8 +194,7 @@
               "RelativeToolTip": "Services\\VentaService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAwCwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T02:46:30.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T02:46:30.049Z"
             },
             {
               "$type": "Document",
@@ -213,8 +206,7 @@
               "RelativeToolTip": "DTOS\\VentaDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T02:45:51.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T02:45:51.254Z"
             },
             {
               "$type": "Document",
@@ -226,8 +218,7 @@
               "RelativeToolTip": "Controllers\\CompraController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA2wBIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T02:16:18.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T02:16:18.413Z"
             },
             {
               "$type": "Document",
@@ -239,8 +230,7 @@
               "RelativeToolTip": "Controllers\\ProductosController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAmwAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T04:22:47.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T04:22:47.45Z"
             },
             {
               "$type": "Document",
@@ -252,12 +242,11 @@
               "RelativeToolTip": "WorkTestAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-27T04:15:29.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T04:15:29.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -270,13 +259,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAxwEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAHQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T03:25:32.364Z",
               "EditorCaption": ""
@@ -291,8 +280,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAA7wCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:24:25.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:24:25.725Z"
             },
             {
               "$type": "Document",
@@ -304,8 +292,7 @@
               "RelativeToolTip": "Models\\VentaDetalle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:23:26.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:23:26.331Z"
             },
             {
               "$type": "Document",
@@ -317,8 +304,7 @@
               "RelativeToolTip": "Models\\Venta.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:23:03.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:23:03.383Z"
             },
             {
               "$type": "Document",
@@ -330,8 +316,7 @@
               "RelativeToolTip": "Models\\CompraDetalle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:21:52.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:21:52.519Z"
             },
             {
               "$type": "Document",
@@ -343,8 +328,7 @@
               "RelativeToolTip": "Models\\Compra.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:21:04.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:21:04.108Z"
             },
             {
               "$type": "Document",
@@ -356,8 +340,7 @@
               "RelativeToolTip": "Models\\Cliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:20:33.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:20:33.045Z"
             },
             {
               "$type": "Document",
@@ -369,8 +352,7 @@
               "RelativeToolTip": "Models\\Proveedor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:20:03.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:20:03.08Z"
             },
             {
               "$type": "Document",
@@ -382,8 +364,7 @@
               "RelativeToolTip": "Models\\Producto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:18:23.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:18:23.85Z"
             }
           ]
         }

@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
+using System.Text.Json.Serialization;
 using WorkTestAPI.Data;
 using WorkTestAPI.Repositories;
 using WorkTestAPI.Services;
-using System.Text.Json.Serialization; // <--- SE AGREGÓ ESTO
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace WorkTestAPI
 {
@@ -15,52 +16,81 @@ namespace WorkTestAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // 🔌 Conexión a SQL Server
+            // 1. 🔌 Conexión a SQL Server
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // 📦 Servicios y Configuración de JSON (PARA EVITAR CICLOS)
+            // 2. 📦 Controladores y Configuración de JSON (Evita ciclos infinitos)
             builder.Services.AddControllers()
                 .AddJsonOptions(options =>
                 {
-                    // Esto soluciona el error "A possible object cycle was detected"
                     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                 });
 
-            // 🧪 Swagger
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            // 3. 🔐 Configuración de Autenticación JWT
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                };
+            });
 
-            // Inyección de dependencias
+            // 4. 🧪 Swagger con soporte para JWT (El botón "Authorize")
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WorkTestAPI", Version = "v1" });
+
+                // Definir el esquema de seguridad
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Ingresa: Bearer [tu_token]"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
+            });
+
+            // 5. 💉 Inyección de Dependencias
             builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
             builder.Services.AddScoped<IProductoService, ProductoService>();
+            builder.Services.AddScoped<AuthService>(); // Agregado para el Login
             builder.Services.AddScoped<CompraService>();
             builder.Services.AddScoped<VentaService>();
 
-            builder.Services.AddScoped<AuthService>();
-
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-
-                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                        ValidAudience = builder.Configuration["Jwt:Audience"],
-
-                        IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])
-                        )
-                    };
-                });
-
             var app = builder.Build();
 
-            // 🚀 Pipeline
+            // 6. 🚀 Pipeline de la aplicación
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -69,12 +99,11 @@ namespace WorkTestAPI
 
             app.UseHttpsRedirection();
 
-           
-
-            app.MapControllers();
-
+            // IMPORTANTE: Authentication debe ir ANTES de Authorization
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.MapControllers();
 
             // 🔍 Debug (opcional)
             AppDomain.CurrentDomain.FirstChanceException += (sender, eventArgs) =>
