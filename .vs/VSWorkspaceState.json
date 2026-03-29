@@ -8,6 +8,6 @@
     "\\WorkTestAPI\\Models",
     "\\WorkTestAPI\\Services"
   ],
-  "SelectedNode": "\\WorkTestAPI\\Data\\AppDbContext.cs",
+  "SelectedNode": "\\WorkTestAPI\\Services\\VentaService.cs",
   "PreviewInSolutionExplorer": false
 }
