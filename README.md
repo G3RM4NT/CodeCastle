@@ -59,3 +59,7 @@ Script de Inicialización: El ejecutable SQL asegura que el sistema cuente con l
 Seguridad: Uso de JWT para proteger la información y asegurar que solo personal autorizado gestione el inventario y las ventas.
 
 Arquitectura: Implementación de DTOs para garantizar que la comunicación entre la API y Angular sea segura y eficiente.
+
+
+NOTA: Destacar que al crear la cuenta permite seleccionar los roles Vendedor y admin esto no deberia de ser asi pero se ha realizado para que sea mas practico en la prueba
+al seleccionar admin tienen acceso total pero al seleccionar vendedor solo tienen acceso a ciertos modulos .
