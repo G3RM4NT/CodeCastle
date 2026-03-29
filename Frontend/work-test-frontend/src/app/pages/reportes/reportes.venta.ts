@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // 1. Importar ChangeDetectorRef
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { VentaService } from '../../services/venta.service';
@@ -13,12 +13,15 @@ export class ReporteVentasComponent implements OnInit {
   ventasOriginales: any[] = [];
   ventasFiltradas: any[] = [];
 
-  // Filtros inicializados
   filtroNombre: string = '';
   fechaInicio: string = '';
   fechaFin: string = '';
 
-  constructor(private ventaService: VentaService) {}
+  // 2. Inyectar en el constructor
+  constructor(
+    private ventaService: VentaService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     this.cargarReporte();
@@ -27,9 +30,10 @@ export class ReporteVentasComponent implements OnInit {
   cargarReporte() {
     this.ventaService.getAll().subscribe({
       next: (res: any[]) => {
-        this.ventasOriginales = res;
-        this.ventasFiltradas = res; // Mostramos todas al inicio
-        console.log('Datos cargados:', res);
+        // 3. Spread y detección instantánea
+        this.ventasOriginales = [...res];
+        this.ventasFiltradas = [...res];
+        this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('Error:', err);
@@ -39,46 +43,48 @@ export class ReporteVentasComponent implements OnInit {
   }
 
   aplicarFiltros() {
-    // Si no hay datos, no hacemos nada
     if (!this.ventasOriginales) return;
 
     this.ventasFiltradas = this.ventasOriginales.filter(v => {
-      // 1. Filtro por nombre (Verificamos que exista el objeto cliente)
-      const nombreCliente = v.cliente?.nombre?.toLowerCase() || '';
+      // Manejo flexible de Mayúsculas/minúsculas para Cliente
+      const clienteObj = v.Cliente || v.cliente;
+      const nombreCliente = clienteObj?.Nombre?.toLowerCase() || clienteObj?.nombre?.toLowerCase() || '';
       const coincideNombre = nombreCliente.includes(this.filtroNombre.toLowerCase());
 
-      // 2. Filtro por fechas (Normalizamos a inicio del día para comparar)
-      const fechaVenta = new Date(v.fecha).setHours(0,0,0,0);
+      const fechaRaw = v.Fecha || v.fecha;
+      const fechaVenta = new Date(fechaRaw).setHours(0,0,0,0);
       
       let coincideFecha = true;
-
       if (this.fechaInicio) {
         const inicio = new Date(this.fechaInicio).setHours(0,0,0,0);
         if (fechaVenta < inicio) coincideFecha = false;
       }
-
       if (this.fechaFin) {
         const fin = new Date(this.fechaFin).setHours(23,59,59,999);
         if (fechaVenta > fin) coincideFecha = false;
       }
-
       return coincideNombre && coincideFecha;
     });
+    this.cdr.detectChanges();
   }
 
   limpiarFiltros() {
     this.filtroNombre = '';
     this.fechaInicio = '';
     this.fechaFin = '';
-    this.ventasFiltradas = this.ventasOriginales;
+    this.ventasFiltradas = [...this.ventasOriginales];
+    this.cdr.detectChanges();
   }
 
-  // Agrégalo después de limpiarFiltros()
   calcularTotalReporte(): number {
     return this.ventasFiltradas.reduce((total, v) => {
-      // Sumamos los subtotales de cada detalle de la venta
-      const subtotalVenta = v.detalles?.reduce((sub: number, d: any) => 
-        sub + (d.cantidad * d.precioVenta), 0) || 0;
+      // Manejo flexible de Detalles/detalles
+      const detalles = v.VentaDetalles || v.detalles || [];
+      const subtotalVenta = detalles.reduce((sub: number, d: any) => {
+        const cant = d.Cantidad || d.cantidad || 0;
+        const precio = d.PrecioVenta || d.precioVenta || 0;
+        return sub + (cant * precio);
+      }, 0);
       return total + subtotalVenta;
     }, 0);
   }

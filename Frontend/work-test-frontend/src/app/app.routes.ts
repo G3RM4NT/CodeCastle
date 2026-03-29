@@ -4,7 +4,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard';
 import { authGuard } from './guards/auth-guard';
 import { ProductosComponent } from './pages/productos/productos';
 import { VentasComponent } from './pages/ventas/ventas.component';
-import { ReporteVentasComponent } from './pages/reportes/reportes.venta';
+import { ComprasComponent } from './pages/compras/compras.component';
+import { ReporteComprasComponent } from './pages/reportes/reporte.compra';
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
@@ -14,9 +15,13 @@ export const routes: Routes = [
 
   { path: 'ventas', component: VentasComponent },
 
+  { path: 'compras', component: ComprasComponent },
+
   {
     path: 'reportev',
-    loadComponent: () => import('./pages/reportes/reportes.venta').then(m => m.ReporteVentasComponent)
-  }
+    loadComponent: () => import('./pages/reportes/reportes.venta').then(m => m.ReporteVentasComponent),
+  },
+
+  { path: 'reportec', component: ReporteComprasComponent }
 
 ];

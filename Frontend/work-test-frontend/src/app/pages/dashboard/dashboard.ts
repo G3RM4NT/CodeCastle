@@ -37,4 +37,8 @@ export class DashboardComponent {
   goToReporteVenta() {
     this.router.navigate(['/reportev']);
   }
+
+   goToReporteCompra() {
+    this.router.navigate(['/reportec']);
+  }
 }

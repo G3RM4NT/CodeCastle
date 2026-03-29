@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WorkTestAPI",
+    "\\WorkTestAPI\\Services"
   ],
-  "SelectedNode": "\\WorkTestAPI.sln",
+  "SelectedNode": "\\WorkTestAPI\\Services\\VentaService.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,77 @@
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-warning text-dark">
+      <h3 class="mb-0">Registro de Compras (Entrada de Stock)</h3>
+    </div>
+    <div class="card-body">
+      
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <label class="form-label fw-bold">Proveedor</label>
+          <select class="form-select" [(ngModel)]="idProveedor">
+            <option value="0">-- Seleccione Proveedor --</option>
+            <option *ngFor="let p of proveedores" [value]="p.id">{{ p.nombre }}</option>
+          </select>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row g-3 align-items-end">
+        <div class="col-md-4">
+          <label class="form-label">Producto</label>
+          <select class="form-select" [(ngModel)]="idProducto">
+            <option value="0">-- Seleccione --</option>
+            <option *ngFor="let prod of productos" [value]="prod.id">{{ prod.nombre }}</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label class="form-label">Cantidad</label>
+          <input type="number" class="form-control" [(ngModel)]="cantidad">
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Precio Costo (Compra)</label>
+          <input type="number" class="form-control" [(ngModel)]="precioCosto">
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-dark w-100" (click)="agregarProducto()">
+            <i class="bi bi-plus-circle"></i> Agregar al Carrito
+          </button>
+        </div>
+      </div>
+
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered">
+          <thead class="table-secondary">
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Costo Unit.</th>
+              <th>Subtotal</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of detalleCompra; let i = index">
+              <td>{{ item.nombreProducto }}</td>
+              <td>{{ item.cantidad }}</td>
+              <td>{{ item.precioCosto | currency }}</td>
+              <td>{{ item.subtotal | currency }}</td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="eliminarProducto(i)">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-end mt-3">
+        <h4>Total Compra: <span class="text-success">{{ totalCompra | currency }}</span></h4>
+        <button class="btn btn-success btn-lg mt-2" (click)="guardarCompra()">
+          Finalizar Compra
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
