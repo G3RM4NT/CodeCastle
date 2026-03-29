@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore; // <--- Agregado por seguridad
 using WorkTestAPI.Data;
 using WorkTestAPI.DTOS;
-using WorkTestAPI.Models; // <--- ASEGÚRATE de tener este para reconocer la clase Usuario
+using WorkTestAPI.Models; 
 
 namespace WorkTestAPI.Services
 {
@@ -52,6 +52,28 @@ namespace WorkTestAPI.Services
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public bool Register(UsuarioRegistroDTO dto)
+        {
+            // 1. Verificamos si el correo ya existe en la base de datos
+            if (_context.Usuarios.Any(u => u.Email == dto.Email))
+                return false;
+
+            // 2. Creamos el nuevo usuario con los datos del DTO
+            var nuevoUsuario = new Usuario
+            {
+                Nombre = dto.Nombre,
+                Email = dto.Email,
+                Password = dto.Password,
+                Rol = string.IsNullOrEmpty(dto.Rol) ? "Vendedor" : dto.Rol
+            };
+
+            // 3. Guardamos en la BD
+            _context.Usuarios.Add(nuevoUsuario);
+            _context.SaveChanges();
+
+            return true;
         }
     }
 }

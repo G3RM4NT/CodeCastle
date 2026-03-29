@@ -6,6 +6,8 @@ import { ProductosComponent } from './pages/productos/productos';
 import { VentasComponent } from './pages/ventas/ventas.component';
 import { ComprasComponent } from './pages/compras/compras.component';
 import { ReporteComprasComponent } from './pages/reportes/reporte.compra';
+import { RegistroComponent } from './pages/registro/registro.component';
+
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
@@ -22,6 +24,9 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/reportes/reportes.venta').then(m => m.ReporteVentasComponent),
   },
 
-  { path: 'reportec', component: ReporteComprasComponent }
+  { path: 'reportec', component: ReporteComprasComponent },
+
+  { path: 'registro', component: RegistroComponent }
+
 
 ];

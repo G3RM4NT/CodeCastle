@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px;">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-primary">Crear Cuenta</h2>
+      <p class="text-muted">Únete a CodeCastle</p>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Nombre Completo</label>
+      <input type="text" [(ngModel)]="usuario.nombre" class="form-control" placeholder="Ej: Juan Pérez">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Correo Electrónico</label>
+      <input type="email" [(ngModel)]="usuario.email" class="form-control" placeholder="usuario@correo.com">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Contraseña</label>
+      <input type="password" [(ngModel)]="usuario.password" class="form-control" placeholder="********">
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label fw-bold">Rol de Usuario</label>
+      <select [(ngModel)]="usuario.rol" class="form-select">
+        <option value="Vendedor">Vendedor (Acceso limitado)</option>
+        <option value="Administrador">Administrador (Acceso total)</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary w-100 py-2 fw-bold" (click)="ejecutarRegistro()">
+      Registrar Usuario
+    </button>
+    
+    <div class="text-center mt-3">
+      <a routerLink="/login" class="text-decoration-none">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+  </div>
+</div>

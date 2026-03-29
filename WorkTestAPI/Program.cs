@@ -29,18 +29,18 @@ namespace WorkTestAPI
             });
             // ---------------------------------------
 
-            // 1. 🔌 Conexión a SQL Server
+            // 1.  Conexión a SQL Server
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // 2. 📦 Controladores y Configuración de JSON (Evita ciclos infinitos)
+            // 2.  Controladores y Configuración de JSON (Evita ciclos infinitos)
             builder.Services.AddControllers()
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                 });
 
-            // 3. 🔐 Configuración de Autenticación JWT
+            // 3.  Configuración de Autenticación JWT
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -61,7 +61,7 @@ namespace WorkTestAPI
                 };
             });
 
-            // 4. 🧪 Swagger con soporte para JWT (El botón "Authorize")
+            // 4.  Swagger con soporte para JWT (El botón "Authorize")
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -94,7 +94,7 @@ namespace WorkTestAPI
                 });
             });
 
-            // 5. 💉 Inyección de Dependencias
+            // 5.  Inyección de Dependencias
             builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
             builder.Services.AddScoped<IProductoService, ProductoService>();
             builder.Services.AddScoped<AuthService>(); // Agregado para el Login
@@ -103,7 +103,7 @@ namespace WorkTestAPI
 
             var app = builder.Build();
 
-            // 6. 🚀 Pipeline de la aplicación
+            // 6.  Pipeline de la aplicación
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -122,7 +122,7 @@ namespace WorkTestAPI
 
             app.MapControllers();
 
-            // 🔍 Debug (opcional)
+            //  Debug (opcional)
             AppDomain.CurrentDomain.FirstChanceException += (sender, eventArgs) =>
             {
                 Console.WriteLine(eventArgs.Exception.ToString());

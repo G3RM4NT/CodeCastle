@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\WorkTestAPI",
+    "\\WorkTestAPI\\Controllers",
+    "\\WorkTestAPI\\Data",
+    "\\WorkTestAPI\\DTOS",
+    "\\WorkTestAPI\\Models",
     "\\WorkTestAPI\\Services"
   ],
-  "SelectedNode": "\\WorkTestAPI\\Services\\VentaService.cs",
+  "SelectedNode": "\\WorkTestAPI\\Controllers\\CompraController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -25,5 +25,17 @@ namespace WorkTestAPI.Controllers
 
             return Ok(new { token });
         }
+
+        // --- MÉTODO AÑADIDO PARA REGISTRO ---
+        [HttpPost("register")]
+        public IActionResult Register(UsuarioRegistroDTO dto)
+        {
+            var resultado = _service.Register(dto);
+
+            if (!resultado)
+                return BadRequest("El correo ya está registrado o los datos son inválidos");
+
+            return Ok(new { message = "Usuario registrado correctamente" });
+        }
     }
 }
