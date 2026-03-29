@@ -40,30 +40,23 @@ namespace WorkTestAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CrearVenta([FromBody] VentaDTO dto)
         {
-            // Validar campos obligatorios básicos
-            if (dto == null || dto.ClienteId <= 0 || dto.Detalles == null || dto.Detalles.Count == 0)
+            // LOG DE DEPURACIÓN: Esto aparecerá en tu consola de Visual Studio
+            Console.WriteLine($"Recibiendo venta para Cliente: {dto.ClienteId}");
+            Console.WriteLine($"Cantidad de detalles recibidos: {dto?.Detalles?.Count ?? 0}");
+
+            if (dto == null || dto.Detalles == null || dto.Detalles.Count == 0)
             {
-                return BadRequest(new { message = "Advertencia: completar campos obligatorios." });
+                return BadRequest(new { message = "El servidor recibió la lista de productos VACÍA. Revisa los nombres en Angular." });
             }
 
-            try
-            {
-                var resultado = await _service.RegistrarVenta(dto);
+            var resultado = await _service.RegistrarVenta(dto);
 
-                // Manejo de errores de lógica de negocio (Stock, existencia)
-                if (resultado.Contains("insuficiente") || resultado.Contains("no existe"))
-                {
-                    return BadRequest(new { message = resultado });
-                }
-
-                // Si todo sale bien, retornamos un mensaje de éxito
-                return Ok(new { message = "Venta registrada con éxito", detalle = resultado });
-            }
-            catch (Exception ex)
+            if (resultado.Contains("Error"))
             {
-                // Loguear el error (opcional)
-                return StatusCode(500, new { message = "Error interno del servidor", error = ex.Message });
+                return StatusCode(500, new { message = resultado });
             }
+
+            return Ok(new { message = resultado });
         }
     }
 }

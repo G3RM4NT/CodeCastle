@@ -1,61 +1,185 @@
-<div class="container mt-4">
+<div class="dashboard-wrapper">
 
-  <!-- HEADER -->
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Dashboard</h2>
-    <button class="btn btn-danger" (click)="logout()">Cerrar sesión</button>
-  </div>
+  <button class="sidebar-logout" (click)="logout()" title="Cerrar sesión" 
+          style="position: fixed; bottom: 20px; left: 20px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+      <polyline points="16 17 21 12 16 7"/>
+      <line x1="21" y1="12" x2="9" y2="12"/>
+    </svg>
+    <span class="nav-tooltip">Cerrar sesión</span>
+  </button>
 
-  <!-- BIENVENIDA -->
-  <div class="alert alert-primary text-center">
-    Bienvenido al sistema de gestión Prueba Code Castle
-  </div>
+  <main class="main-content" style="margin-left: 0; width: 100%;">
 
-  <!-- CARDS -->
-  <div class="row g-4 mt-3">
-
-    <!-- PRODUCTOS -->
-    <div class="col-md-4">
-      <div class="card shadow text-center p-3">
-        <h4>Productos</h4>
-        <p>Gestiona inventario</p>
-        <button class="btn btn-primary" (click)="goToProductos()">Ir</button>
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="page-title">Dashboard</h1>
+        <span class="page-subtitle">Bienvenido al sistema de gestión</span>
       </div>
-    </div>
-
-    <!-- VENTAS -->
-    <div class="col-md-4">
-      <div class="card shadow text-center p-3">
-        <h4>Ventas</h4>
-        <p>Registra ventas</p>
-        <button class="btn btn-success" (click)="goToVentas()">Ir</button>
+      <div class="topbar-right">
+        <div class="user-badge">
+          <div class="user-avatar">{{ usuarioNombre | slice:0:2 | uppercase }}</div>
+          <div class="user-info">
+            <span class="user-name">{{ usuarioNombre }}</span>
+            <span class="user-role">{{ usuarioRol }}</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <!-- COMPRAS -->
-    <div class="col-md-4">
-      <div class="card shadow text-center p-3">
-        <h4>Compras</h4>
-        <p>Controla compras</p>
-        <button class="btn btn-warning" (click)="goToCompras()">Ir</button>
+    <section class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon icon-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Productos</span>
+          <span class="stat-value">—</span>
+        </div>
       </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card shadow text-center p-3">
-        <h4>Reporte de ventas</h4>
-        <p>Gestiona tus ventas realizadas</p>
-        <button class="btn btn-warning" (click)="goToReporteVenta()">Ir</button>
+      <div class="stat-card">
+        <div class="stat-icon icon-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Ventas</span>
+          <span class="stat-value">—</span>
+        </div>
       </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card shadow text-center p-3">
-        <h4>Reporte de Compras</h4>
-        <p>Gestiona tus Compras realizadas</p>
-        <button class="btn btn-warning" (click)=" goToReporteCompra()">Ir</button>
+      <div class="stat-card">
+        <div class="stat-icon icon-amber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Compras</span>
+          <span class="stat-value">—</span>
+        </div>
       </div>
-    </div>
+      <div class="stat-card">
+        <div class="stat-icon icon-teal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-label">Reportes</span>
+          <span class="stat-value">2</span>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <section class="modules-section">
+      <h2 class="section-title">Módulos del sistema</h2>
+      <div class="modules-grid">
+
+        <div class="module-card">
+          <div class="module-header blue">
+            <div class="module-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+          </div>
+          <div class="module-body">
+            <h3 class="module-title">Productos</h3>
+            <p class="module-desc">Gestiona el inventario, agrega, edita y controla tu stock.</p>
+            <button class="module-btn blue-btn" (click)="goToProductos()">
+              Ir al módulo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header green">
+            <div class="module-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="module-body">
+            <h3 class="module-title">Ventas</h3>
+            <p class="module-desc">Registra y administra todas las ventas realizadas en el sistema.</p>
+            <button class="module-btn green-btn" (click)="goToVentas()">
+              Ir al módulo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header amber">
+            <div class="module-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="module-body">
+            <h3 class="module-title">Compras</h3>
+            <p class="module-desc">Controla y registra todas las compras y proveedores.</p>
+            <button class="module-btn amber-btn" (click)="goToCompras()">
+              Ir al módulo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header teal">
+            <div class="module-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+          </div>
+          <div class="module-body">
+            <h3 class="module-title">Reporte de Ventas</h3>
+            <p class="module-desc">Visualiza y analiza el historial completo de ventas realizadas.</p>
+            <button class="module-btn teal-btn" (click)="goToReporteVenta()">
+              Ir al módulo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header indigo">
+            <div class="module-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+          </div>
+          <div class="module-body">
+            <h3 class="module-title">Reporte de Compras</h3>
+            <p class="module-desc">Consulta el detalle de todas las compras y gastos registrados.</p>
+            <button class="module-btn indigo-btn" (click)="goToReporteCompra()">
+              Ir al módulo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 </div>

@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.css'
 })
@@ -34,7 +34,7 @@ export class LoginComponent {
         if (res?.token) {
           this.auth.saveToken(res.token);
 
-          // 🔥 Redirección (puedes cambiar a dashboard si quieres)
+         
           this.router.navigate(['/dashboard']);
         } else {
           alert('No se recibió token');

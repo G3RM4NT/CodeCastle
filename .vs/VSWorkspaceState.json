@@ -8,6 +8,6 @@
     "\\WorkTestAPI\\Models",
     "\\WorkTestAPI\\Services"
   ],
-  "SelectedNode": "\\WorkTestAPI\\Controllers\\CompraController.cs",
+  "SelectedNode": "\\WorkTestAPI\\Services\\AuthService.cs",
   "PreviewInSolutionExplorer": false
 }

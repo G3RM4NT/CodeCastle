@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkTestAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3fc31056be69f54b248af8c3fd6ae01f7056fae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4216315ccb8357328b430d93ba8de2be6acb2de")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkTestAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkTestAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

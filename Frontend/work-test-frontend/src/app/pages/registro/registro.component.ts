@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './registro.component.html'
+  imports: [CommonModule, FormsModule,RouterLink],
+  templateUrl: './registro.component.html',
+  styleUrl: './register.css'
 })
 export class RegistroComponent {
   // Objeto que coincide con tu DTO del Backend

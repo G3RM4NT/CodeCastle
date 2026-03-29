@@ -1,10 +1,11 @@
 /* ============================
-   LOGIN COMPONENT STYLES
+   REGISTER COMPONENT STYLES
    CodeCastle – Auth Screen
    ============================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 
+/* ---------- Variables ---------- */
 :root {
   --primary:       #1a8fe3;
   --primary-dark:  #1272b8;
@@ -14,7 +15,7 @@
   --text-muted:    #8fa3b1;
   --border:        #dde8f0;
   --white:         #ffffff;
-  --bg-left:       #f7fafd;
+  --bg-right:      #f7fafd;
 }
 
 /* ---------- Wrapper ---------- */
@@ -26,11 +27,126 @@
 }
 
 /* ============================
-   LEFT PANEL — Formulario
+   LEFT PANEL
    ============================ */
 .auth-panel-left {
+  position: relative;
+  width: 38%;
+  background: linear-gradient(145deg, #1a8fe3 0%, #0e6bbf 60%, #0b5499 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 40px;
+  overflow: hidden;
+}
+
+/* Decorative geometric shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.shape-top-right {
+  width: 180px;
+  height: 180px;
+  top: -60px;
+  right: -60px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.shape-bottom-left {
+  width: 220px;
+  height: 220px;
+  bottom: -80px;
+  left: -80px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.shape-mid {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+}
+
+/* Brand / Logo */
+.brand {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+/* Panel content */
+.panel-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.panel-title {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.panel-subtitle {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  max-width: 260px;
+  margin: 0 auto 32px;
+}
+
+.btn-outline-white {
+  display: inline-block;
+  padding: 11px 38px;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #ffffff;
+    color: #1272b8;
+    text-decoration: none;
+  }
+}
+
+/* ============================
+   RIGHT PANEL
+   ============================ */
+.auth-panel-right {
   flex: 1;
-  background: var(--bg-left);
+  background: var(--bg-right);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,47 +155,31 @@
 
 .form-container {
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Brand */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 30px;
-  align-self: flex-start;
-}
-
-.brand-name {
-  font-weight: 800;
-  font-size: 1.05rem;
-  color: var(--text-dark);
-}
-
 /* Title */
 .form-title {
-  font-size: 1.9rem;
+  font-size: 1.95rem;
   font-weight: 800;
   color: var(--primary);
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   text-align: center;
-  width: 100%;
 }
 
 /* Social buttons */
 .social-buttons {
   display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
 .social-btn {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1.5px solid var(--border);
   background: var(--white);
@@ -97,15 +197,15 @@
   }
 }
 
-/* Divider */
+/* Divider text */
 .divider-text {
-  font-size: 0.82rem;
+  font-size: 0.83rem;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   text-align: center;
 }
 
-/* Fields */
+/* Form fields */
 .field-group {
   width: 100%;
   display: flex;
@@ -121,7 +221,7 @@
 
 .input-icon {
   position: absolute;
-  left: 13px;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
@@ -130,7 +230,7 @@
 
 .form-field {
   width: 100%;
-  padding: 13px 16px 13px 40px;
+  padding: 13px 16px 13px 42px;
   background: #eef5fb;
   border: 1.5px solid transparent;
   border-radius: 8px;
@@ -139,6 +239,8 @@
   color: var(--text-dark);
   transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
   outline: none;
+  appearance: none;
+  -webkit-appearance: none;
   box-sizing: border-box;
 
   &::placeholder {
@@ -152,24 +254,12 @@
   }
 }
 
-/* Forgot password */
-.forgot-row {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -4px;
-}
-
-.forgot-link {
-  font-size: 0.8rem;
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 0.75;
-    text-decoration: underline;
-  }
+.form-select-styled {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238fa3b1' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
 }
 
 /* Primary button */
@@ -202,119 +292,23 @@
 }
 
 /* ============================
-   RIGHT PANEL — Bienvenida
-   ============================ */
-.auth-panel-right {
-  position: relative;
-  width: 38%;
-  background: linear-gradient(145deg, #1a8fe3 0%, #0e6bbf 60%, #0b5499 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 48px 36px;
-  overflow: hidden;
-}
-
-/* Shapes */
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-}
-
-.shape-top-left {
-  width: 170px;
-  height: 170px;
-  top: -58px;
-  left: -58px;
-  background: rgba(255, 255, 255, 0.07);
-}
-
-.shape-bottom-right {
-  width: 210px;
-  height: 210px;
-  bottom: -75px;
-  right: -75px;
-  background: rgba(255, 255, 255, 0.07);
-}
-
-.shape-mid {
-  width: 72px;
-  height: 72px;
-  bottom: 30%;
-  left: 26px;
-  transform: rotate(45deg);
-  border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.18);
-  background: transparent;
-}
-
-/* Panel content */
-.panel-content {
-  text-align: center;
-  z-index: 1;
-}
-
-.panel-title {
-  color: var(--white);
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 14px;
-}
-
-.panel-subtitle {
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.9rem;
-  line-height: 1.65;
-  max-width: 250px;
-  margin: 0 auto 30px;
-}
-
-.btn-outline-white {
-  display: inline-block;
-  padding: 11px 38px;
-  border: 2px solid #ffffff;
-  border-radius: 30px;
-  color: #ffffff;
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background 0.25s ease, color 0.25s ease;
-  cursor: pointer;
-
-  &:hover {
-    background: #ffffff;
-    color: #1272b8;
-    text-decoration: none;
-  }
-}
-
-/* ============================
    RESPONSIVE
    ============================ */
 @media (max-width: 768px) {
   .auth-wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
-  .auth-panel-right {
+  .auth-panel-left {
     width: 100%;
     padding: 40px 24px;
     min-height: auto;
 
     .panel-title { font-size: 1.6rem; }
-    .panel-subtitle { font-size: 0.87rem; }
+    .panel-subtitle { font-size: 0.88rem; }
   }
 
-  .auth-panel-left {
+  .auth-panel-right {
     padding: 36px 24px;
-  }
-
-  .brand {
-    align-self: center;
   }
 }

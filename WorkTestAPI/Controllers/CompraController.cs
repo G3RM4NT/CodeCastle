@@ -3,8 +3,11 @@ using WorkTestAPI.Data;
 using WorkTestAPI.DTOS;
 using WorkTestAPI.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization; // <--- AGREGADO
+
 namespace WorkTestAPI.Controllers
 {
+    [Authorize(Roles = "Administrador")] // <--- SOLO el Admin entra a este controlador
     [ApiController]
     [Route("api/[controller]")]
     public class CompraController : ControllerBase
@@ -23,7 +26,7 @@ namespace WorkTestAPI.Controllers
         {
             var compras = await _context.Compras
                 .Include(c => c.Proveedor)
-                .Include(c => c.CompraDetalles) // Nombre corregido
+                .Include(c => c.CompraDetalles)
                     .ThenInclude(d => d.Producto)
                 .ToListAsync();
 
@@ -62,7 +65,7 @@ namespace WorkTestAPI.Controllers
             if (compra == null) return NotFound();
 
             _context.Compras.Remove(compra);
-            await _context.SaveChangesAsync(); // Gracias a la Cascada, borrará los detalles solo
+            await _context.SaveChangesAsync();
 
             return Ok("Compra y detalles eliminados");
         }

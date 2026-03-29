@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ClienteService } from '../../services/cliente.service';
 import { ProductoService } from '../../services/producto.service';
-import { VentaService } from '../../services/venta.service'; // Asegúrate de tenerlo
+import { VentaService } from '../../services/venta.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { AuthService } from '../../services/auth.service';
 
 interface Producto {
   id: number;
@@ -25,13 +26,12 @@ interface Venta {
   detalles: DetalleVenta[];
 }
 
- @Component({
+@Component({
   selector: 'app-ventas',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl:'./ventas.component.html'
+  templateUrl: './ventas.component.html'
 })
-
 export class VentasComponent implements OnInit {
 
   clientes: any[] = [];
@@ -52,7 +52,9 @@ export class VentasComponent implements OnInit {
   constructor(
     private clienteService: ClienteService,
     private productoService: ProductoService,
-    private ventaService: VentaService
+    private ventaService: VentaService,
+    private auth: AuthService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
@@ -62,73 +64,71 @@ export class VentasComponent implements OnInit {
 
   getClientes() {
     this.clienteService.getAll().subscribe({
-      next: (res: any) => this.clientes = res,
+      next: (res: any) => {
+        this.clientes = res;
+        this.cdr.detectChanges();
+      },
       error: (err: HttpErrorResponse) => console.error('Error clientes:', err.message)
     });
   }
 
   getProductos() {
     this.productoService.getAll().subscribe({
-      next: (res: any) => this.productos = res,
+      next: (res: any) => {
+        this.productos = res;
+        this.cdr.detectChanges();
+      },
       error: (err: HttpErrorResponse) => console.error('Error productos:', err.message)
     });
   }
 
-seleccionarProducto() {
-  const idSeleccionado = Number(this.detalle.productoId);
-  const prod = this.productos.find(p => p.id === idSeleccionado);
-
-  if (prod) {
-    this.detalle.nombre = prod.nombre;
-    
-    // 💡 INTENTO DE MAPEO DINÁMICO:
-    // Probamos con 'precioUnitario' (estándar JSON), luego 'precio' (tu interfaz) 
-    // y finalmente 'PrecioUnitario' (como está en SQL)
-    this.detalle.precioVenta = (prod as any).precioUnitario || (prod as any).precio || (prod as any).PrecioUnitario || 0;
-
-    console.log('Producto encontrado:', prod); // Revisa en la consola del navegador qué nombre trae
-  } else {
-    this.detalle.precioVenta = 0;
-  }
-}
-
-agregarProducto() {
-  const idSeleccionado = Number(this.detalle.productoId);
-  const prodOriginal = this.productos.find(p => p.id === idSeleccionado);
-
-  // 1. Validar que seleccionó algo
-  if (!prodOriginal) {
-    alert("Por favor, seleccione un producto de la lista.");
-    return;
+  trackById(index: number, item: any) {
+    return item.id;
   }
 
-  // 2. Validar números negativos o cero
-  if (this.detalle.cantidad <= 0) {
-    alert("La cantidad debe ser mayor a 0.");
-    return;
+  seleccionarProducto() {
+    const idSeleccionado = Number(this.detalle.productoId);
+    const prod = this.productos.find(p => p.id === idSeleccionado);
+
+    if (prod) {
+      this.detalle.nombre = prod.nombre;
+      this.detalle.precioVenta = (prod as any).precioUnitario || (prod as any).precio || (prod as any).PrecioUnitario || 0;
+      console.log('Producto encontrado:', prod);
+    } else {
+      this.detalle.precioVenta = 0;
+    }
   }
 
-  // 3. VALIDACIÓN DE STOCK (El "OJO" de la prueba)
-  // Buscamos si ya existe el producto en la tabla para sumar las cantidades
-  const existente = this.venta.detalles.find(d => d.productoId === idSeleccionado);
-  const cantidadTotal = existente ? (existente.cantidad + this.detalle.cantidad) : this.detalle.cantidad;
+  agregarProducto() {
+    const idSeleccionado = Number(this.detalle.productoId);
+    const prodOriginal = this.productos.find(p => p.id === idSeleccionado);
 
-  if (cantidadTotal > prodOriginal.stock) {
-    alert(`No puedes agregar esa cantidad. Stock disponible: ${prodOriginal.stock}. En tabla ya tienes: ${existente ? existente.cantidad : 0}`);
-    return;
+    if (!prodOriginal) {
+      alert("Por favor, seleccione un producto de la lista.");
+      return;
+    }
+
+    if (this.detalle.cantidad <= 0) {
+      alert("La cantidad debe ser mayor a 0.");
+      return;
+    }
+
+    const existente = this.venta.detalles.find(d => d.productoId === idSeleccionado);
+    const cantidadTotal = existente ? (existente.cantidad + this.detalle.cantidad) : this.detalle.cantidad;
+
+    if (cantidadTotal > prodOriginal.stock) {
+      alert(`No puedes agregar esa cantidad. Stock disponible: ${prodOriginal.stock}. En tabla ya tienes: ${existente ? existente.cantidad : 0}`);
+      return;
+    }
+
+    if (existente) {
+      existente.cantidad = cantidadTotal;
+    } else {
+      this.venta.detalles.push({ ...this.detalle, productoId: idSeleccionado });
+    }
+
+    this.detalle = { productoId: 0, nombre: '', cantidad: 1, precioVenta: 0 };
   }
-
-  // 4. Si pasa las validaciones, agregamos o actualizamos
-  if (existente) {
-    existente.cantidad = cantidadTotal;
-  } else {
-    // Usamos spread operator para crear una copia y asegurar que el ID sea número
-    this.venta.detalles.push({ ...this.detalle, productoId: idSeleccionado });
-  }
-
-  // 5. Limpiar el formulario de selección
-  this.detalle = { productoId: 0, nombre: '', cantidad: 1, precioVenta: 0 };
-}
 
   eliminarDetalle(index: number) {
     this.venta.detalles.splice(index, 1);
@@ -139,26 +139,41 @@ agregarProducto() {
   }
 
   guardarVenta() {
-    // 🚩 ADVERTENCIA CAMPOS OBLIGATORIOS
-    if (Number(this.venta.clienteId) === 0 || this.venta.detalles.length === 0) {
-      alert("Advertencia: completar campos obligatorios (Cliente y al menos un producto en tabla).");
+    if (this.venta.detalles.length === 0) {
+      alert("Agregue productos a la venta");
       return;
     }
 
-    // Convertir IDs a números para evitar errores en el Backend
+    const token = this.auth.getToken();
+    let userId = 3;
+
+    if (token) {
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        userId = payload.nameid || payload.sub || 3;
+      } catch (e) {
+        console.error("Error al decodificar token", e);
+      }
+    }
+
     const dataEnviar = {
-      clienteId: Number(this.venta.clienteId),
-      detalles: this.venta.detalles
+      ClienteId: Number(this.venta.clienteId),
+      UsuarioId: Number(userId),
+      Detalles: this.venta.detalles.map(d => ({
+        ProductoId: Number(d.productoId),
+        Cantidad: Number(d.cantidad),
+        PrecioVenta: Number(d.precioVenta)
+      }))
     };
 
     this.ventaService.crearVenta(dataEnviar).subscribe({
       next: (res) => {
-        alert('¡Venta registrada con éxito y Stock actualizado!');
+        alert('¡Venta registrada con éxito!');
         this.venta = { clienteId: 0, detalles: [] };
-        this.getProductos(); // Refrescar lista de productos para ver el nuevo stock
+        this.getProductos();
       },
       error: (err) => {
-        alert('Error al guardar: ' + (err.error?.message || err.message));
+        alert("Error: " + (err.error?.message || "No se pudo guardar la venta"));
       }
     });
   }

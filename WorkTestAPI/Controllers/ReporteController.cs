@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WorkTestAPI.Data;
+using Microsoft.AspNetCore.Authorization; // <--- AGREGADO
 
 namespace WorkTestAPI.Controllers
 {
+    [Authorize] // <--- Requiere estar logueado para cualquier reporte
     [ApiController]
     [Route("api/[controller]")]
     public class ReporteController : ControllerBase
@@ -15,7 +17,7 @@ namespace WorkTestAPI.Controllers
             _context = context;
         }
 
-        // 📦 STOCK EN TIEMPO REAL
+        // 📦 STOCK EN TIEMPO REAL - Acceso: Ambos
         [HttpGet("stock")]
         public async Task<IActionResult> GetStock()
         {
@@ -32,6 +34,7 @@ namespace WorkTestAPI.Controllers
             return Ok(productos);
         }
 
+        // 💰 REPORTE VENTAS - Acceso: Ambos
         [HttpGet("ventas")]
         public async Task<IActionResult> GetVentasPorFecha(DateTime fechaInicio, DateTime fechaFin)
         {

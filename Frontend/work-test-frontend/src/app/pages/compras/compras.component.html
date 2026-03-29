@@ -10,7 +10,7 @@
           <label class="form-label fw-bold">Proveedor</label>
           <select class="form-select" [(ngModel)]="idProveedor">
             <option value="0">-- Seleccione Proveedor --</option>
-            <option *ngFor="let p of proveedores" [value]="p.id">{{ p.nombre }}</option>
+            <option *ngFor="let p of proveedores; trackBy: trackById" [value]="p.id">{{ p.nombre }}</option>
           </select>
         </div>
       </div>
@@ -22,7 +22,7 @@
           <label class="form-label">Producto</label>
           <select class="form-select" [(ngModel)]="idProducto">
             <option value="0">-- Seleccione --</option>
-            <option *ngFor="let prod of productos" [value]="prod.id">{{ prod.nombre }}</option>
+            <option *ngFor="let prod of productos; trackBy: trackById" [value]="prod.id">{{ prod.nombre }}</option>
           </select>
         </div>
         <div class="col-md-2">

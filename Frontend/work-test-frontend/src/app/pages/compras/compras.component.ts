@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CompraService } from '../../services/compra.service';
@@ -27,7 +27,8 @@ export class ComprasComponent implements OnInit {
   constructor(
     private http: HttpClient, 
     private compraService: CompraService,
-    private proveedorService: ProveedorService
+    private proveedorService: ProveedorService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
@@ -36,14 +37,27 @@ export class ComprasComponent implements OnInit {
   }
 
   cargarProductos() {
-    this.http.get<any[]>(`${environment.apiUrl}/Producto`).subscribe(res => this.productos = res);
+    this.http.get<any[]>(`${environment.apiUrl}/Producto`).subscribe({
+      next: (res) => {
+        this.productos = res;
+        this.cdr.detectChanges();
+      },
+      error: (err) => console.error("Error al cargar productos:", err)
+    });
   }
 
   cargarProveedores() {
     this.proveedorService.getAll().subscribe({
-      next: (res) => this.proveedores = res,
+      next: (res) => {
+        this.proveedores = res;
+        this.cdr.detectChanges();
+      },
       error: (err) => console.error("Error al cargar proveedores:", err)
     });
+  }
+
+  trackById(index: number, item: any) {
+    return item.id;
   }
 
   agregarProducto() {
@@ -73,7 +87,6 @@ export class ComprasComponent implements OnInit {
     this.totalCompra = this.detalleCompra.reduce((sum, item) => sum + item.subtotal, 0);
   }
 
-  // MÉTODO UNIFICADO Y CORREGIDO
   guardarCompra() {
     if (this.idProveedor === 0 || this.detalleCompra.length === 0) {
       alert("Selecciona un proveedor y productos");
@@ -94,7 +107,7 @@ export class ComprasComponent implements OnInit {
       next: (response) => {
         alert("¡Compra exitosa! El stock se ha actualizado.");
         this.limpiarFormulario();
-        this.cargarProductos(); // Refrescamos productos para ver el nuevo stock
+        this.cargarProductos(); 
       },
       error: (err) => {
         console.error("Error detallado:", err);

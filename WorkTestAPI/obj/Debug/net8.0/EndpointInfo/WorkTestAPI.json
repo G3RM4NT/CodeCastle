@@ -641,6 +641,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "detalles": {
             "type": "array",
             "items": {
