@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 using WorkTestAPI.Data;
 using WorkTestAPI.Repositories;
 using WorkTestAPI.Services;
+using WorkTestAPI.Models; // Asegúrate de que esto apunte a donde están tus clases Usuario, Producto, etc.
 
 namespace WorkTestAPI
 {
@@ -16,7 +17,7 @@ namespace WorkTestAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // --- AGREGADO: Configuración de CORS ---
+            // --- Configuración de CORS ---
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -27,20 +28,19 @@ namespace WorkTestAPI
                               .AllowAnyMethod();
                     });
             });
-            // ---------------------------------------
 
-            // 1.  Conexión a SQL Server
+            // 1. Conexión a SQL Server
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // 2.  Controladores y Configuración de JSON (Evita ciclos infinitos)
+            // 2. Controladores y Configuración de JSON
             builder.Services.AddControllers()
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                 });
 
-            // 3.  Configuración de Autenticación JWT
+            // 3. Configuración de Autenticación JWT
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -61,13 +61,11 @@ namespace WorkTestAPI
                 };
             });
 
-            // 4.  Swagger con soporte para JWT (El botón "Authorize")
+            // 4. Swagger con soporte para JWT
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WorkTestAPI", Version = "v1" });
-
-                // Definir el esquema de seguridad
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -77,56 +75,103 @@ namespace WorkTestAPI
                     In = ParameterLocation.Header,
                     Description = "Ingresa: Bearer [tu_token]"
                 });
-
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
                         new OpenApiSecurityScheme
                         {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
+                            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
                         },
                         new string[] {}
                     }
                 });
             });
 
-            // 5.  Inyección de Dependencias
+            // 5. Inyección de Dependencias
             builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
             builder.Services.AddScoped<IProductoService, ProductoService>();
-            builder.Services.AddScoped<AuthService>(); // Agregado para el Login
+            builder.Services.AddScoped<AuthService>();
             builder.Services.AddScoped<CompraService>();
             builder.Services.AddScoped<VentaService>();
 
             var app = builder.Build();
 
-            // 6.  Pipeline de la aplicación
-            if (app.Environment.IsDevelopment())
+            // ==========================================================
+            // LÓGICA DE CREACIÓN DE TABLAS E INSERTS AUTOMÁTICOS
+            // ==========================================================
+            using (var scope = app.Services.CreateScope())
             {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<AppDbContext>();
+
+                    // Crea la base de datos y las tablas si no existen
+                    context.Database.EnsureCreated();
+
+                    // --- INSERTS DE USUARIOS ---
+                    if (!context.Usuarios.Any())
+                    {
+                        context.Usuarios.AddRange(
+                            new Usuario { Email = "AdminCode@gmail.com", Password = "Test12345", Rol = "Administrador", Nombre = "William Gonzalez" },
+                            new Usuario { Email = "gonzagerman924@gmail.com", Password = "Test123", Rol = "Vendedor", Nombre = "German Gonzalez" },
+                            new Usuario { Email = "manuel@gmail.com", Password = "12345", Rol = "Vendedor", Nombre = "Manuel Mejia" },
+                            new Usuario { Email = "Blanca@gmail.com", Password = "blanca123", Rol = "Vendedor", Nombre = "Blanca Ester" }
+                        );
+                    }
+
+                    // --- INSERTS DE CLIENTES ---
+                    if (!context.Clientes.Any())
+                    {
+                        context.Clientes.AddRange(
+                            new Cliente { Nombre = "Juan Pérez", Email = "juan.perez@email.com", Telefono = "555-2001" },
+                            new Cliente { Nombre = "María García", Email = "maria.garcia@email.com", Telefono = "555-2002" },
+                            new Cliente { Nombre = "Carlos Rodríguez", Email = "carlos.rod@email.com", Telefono = "555-2003" }
+                        );
+                    }
+
+                    // --- INSERTS DE PROVEEDORES ---
+                    if (!context.Proveedores.Any())
+                    {
+                        context.Proveedores.AddRange(
+                            new Proveedor { Nombre = "Proveedor ABC", Email = "contacto@abc.com", Telefono = "555-1001" },
+                            new Proveedor { Nombre = "Corporación Delta", Email = "admin@deltacorp.com", Telefono = "555-3008" }
+                        );
+                    }
+
+                    // --- INSERTS DE PRODUCTOS ---
+                    if (!context.Productos.Any())
+                    {
+                        context.Productos.AddRange(
+                            new Producto { Nombre = "Laptop Dell", Descripcion = "Laptop i7 16GB", PrecioUnitario = 1200, Stock = 8 },
+                            new Producto { Nombre = "PS3", Descripcion = "Consola vieja", PrecioUnitario = 200, Stock = 6 },
+                            new Producto { Nombre = "PS4", Descripcion = "Consola", PrecioUnitario = 350, Stock = 1 }
+                        );
+                    }
+
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "Ocurrió un error al crear o sembrar la base de datos.");
+                }
+            }
+            // ==========================================================
+
+            // 6. Pipeline de la aplicación
+            if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+            {
+                // Habilitamos Swagger en producción para que puedas probarlo en Railway
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            // --- AGREGADO: Habilitar CORS en el pipeline ---
             app.UseCors("AllowAll");
-            // -----------------------------------------------
-
             app.UseHttpsRedirection();
-
-            // IMPORTANTE: Authentication debe ir ANTES de Authorization
             app.UseAuthentication();
             app.UseAuthorization();
-
             app.MapControllers();
-
-            //  Debug (opcional)
-            AppDomain.CurrentDomain.FirstChanceException += (sender, eventArgs) =>
-            {
-                Console.WriteLine(eventArgs.Exception.ToString());
-            };
 
             app.Run();
         }
