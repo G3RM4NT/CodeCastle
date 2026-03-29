@@ -1,9 +1,40 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
-  templateUrl: './dashboard.html',
-  styleUrl: './dashboard.css',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './dashboard.component.html',
+  styleUrl: './dashboard.css'
 })
-export class Dashboard {}
+export class DashboardComponent {
+
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) {}
+
+  logout() {
+    this.auth.logout();
+    this.router.navigate(['/login']);
+  }
+
+  goToProductos() {
+    this.router.navigate(['/productos']);
+  }
+
+  goToVentas() {
+    this.router.navigate(['/ventas']);
+  }
+
+  goToCompras() {
+    this.router.navigate(['/compras']);
+  }
+
+  goToReporteVenta() {
+    this.router.navigate(['/reportev']);
+  }
+}

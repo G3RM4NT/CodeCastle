@@ -36,6 +36,18 @@
         }
       }
     },
+    "/api/Cliente": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Compra": {
       "get": {
         "tags": [

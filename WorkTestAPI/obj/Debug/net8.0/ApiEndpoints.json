@@ -16,6 +16,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ClienteController",
+    "Method": "Get",
+    "RelativePath": "api/Cliente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WorkTestAPI.Controllers.CompraController",
     "Method": "Get",
     "RelativePath": "api/Compra",

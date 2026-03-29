@@ -16,6 +16,19 @@ namespace WorkTestAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // --- AGREGADO: Configuración de CORS ---
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+            // ---------------------------------------
+
             // 1. 🔌 Conexión a SQL Server
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -96,6 +109,10 @@ namespace WorkTestAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            // --- AGREGADO: Habilitar CORS en el pipeline ---
+            app.UseCors("AllowAll");
+            // -----------------------------------------------
 
             app.UseHttpsRedirection();
 

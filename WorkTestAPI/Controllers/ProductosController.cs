@@ -29,7 +29,12 @@ namespace WorkTestAPI.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Create(Producto producto)
-            => Ok(await _service.Create(producto));
+        {
+            if (string.IsNullOrEmpty(producto.Nombre) || producto.PrecioUnitario <= 0)
+                return BadRequest("Datos inválidos");
+
+            return Ok(await _service.Create(producto));
+        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Producto producto)

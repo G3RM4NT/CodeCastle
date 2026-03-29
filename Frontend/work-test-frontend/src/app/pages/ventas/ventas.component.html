@@ -1,0 +1,83 @@
+<div class="container mt-4">
+  <div class="card shadow-sm p-4">
+    <h2 class="mb-4">Nueva Venta</h2>
+
+    <div class="mb-3">
+      <label class="form-label"><b>Cliente:</b></label>
+      <select [(ngModel)]="venta.clienteId" class="form-select">
+        <option value="0">--- Seleccione un cliente ---</option>
+        <option *ngFor="let c of clientes" [value]="c.id">{{ c.nombre }}</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <div class="row g-2 align-items-end mb-4">
+      <div class="col-md-5">
+        <label class="form-label">Producto:</label>
+        <select [(ngModel)]="detalle.productoId" (change)="seleccionarProducto()" class="form-select">
+          <option value="0">Seleccionar...</option>
+          <option *ngFor="let p of productos" [value]="p.id">
+            {{ p.nombre }} (Stock: {{ p.stock }})
+          </option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label class="form-label">Cantidad:</label>
+        <input type="number" [(ngModel)]="detalle.cantidad" class="form-control" min="1">
+      </div>
+      <div class="col-md-2">
+  <label>Precio Unit.:</label>
+  <input [ngModel]="detalle.precioVenta" 
+         name="precioVenta"
+         type="number" 
+         class="form-control mb-2" 
+         readonly>
+</div>
+      <div class="col-md-2">
+        <button (click)="agregarProducto()" class="btn btn-primary w-100">
+          <i class="bi bi-plus-circle"></i> Agregar
+        </button>
+      </div>
+    </div>
+
+    <table class="table table-hover border">
+      <thead class="table-light">
+        <tr>
+          <th>Producto</th>
+          <th class="text-center">Cantidad</th>
+          <th class="text-end">Precio Unit.</th>
+          <th class="text-end">Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of venta.detalles; let i = index">
+          <td>{{ item.nombre }}</td>
+          <td class="text-center">{{ item.cantidad }}</td>
+          <td class="text-end">{{ item.precioVenta | currency }}</td>
+          <td class="text-end"><b>{{ (item.cantidad * item.precioVenta) | currency }}</b></td>
+          <td class="text-center">
+            <button (click)="eliminarDetalle(i)" class="btn btn-outline-danger btn-sm">Eliminar</button>
+          </td>
+        </tr>
+        <tr *ngIf="venta.detalles.length === 0">
+          <td colspan="5" class="text-center text-muted">No hay productos en la lista</td>
+        </tr>
+      </tbody>
+      <tfoot>
+  <tr>
+    <td colspan="3" class="text-end"><h4>Total a Pagar:</h4></td>
+    <td class="text-end text-success"><h4>{{ total() | currency }}</h4></td>
+    <td></td>
+  </tr>
+</tfoot>
+    </table>
+
+    <div class="text-end mt-3">
+      <button (click)="guardarVenta()" class="btn btn-success btn-lg px-5">
+        Finalizar Venta
+      </button>
+    </div>
+  </div>
+</div>

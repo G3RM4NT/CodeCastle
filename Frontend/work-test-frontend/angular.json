@@ -25,10 +25,11 @@
                 "input": "public"
               }
             ],
-      "styles": [
-  "node_modules/bootstrap/dist/css/bootstrap.min.css",
-  "src/styles.css"
-]
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -65,6 +66,9 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
           "builder": "@angular/build:unit-test"

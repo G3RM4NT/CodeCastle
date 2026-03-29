@@ -7,6 +7,8 @@
         public DateTime Fecha { get; set; }
         public int? UsuarioId { get; set; }
 
+        public virtual Cliente? Cliente { get; set; }
         public List<VentaDetalle> Detalles { get; set; } = new();
+
     }
 }

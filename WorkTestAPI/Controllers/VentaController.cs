@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WorkTestAPI.Data;
 using WorkTestAPI.DTOS;
 using WorkTestAPI.Services;
 
@@ -11,49 +9,61 @@ namespace WorkTestAPI.Controllers
     public class VentaController : ControllerBase
     {
         private readonly VentaService _service;
-        private readonly AppDbContext _context;
 
-        public VentaController(VentaService service, AppDbContext context)
+        // Solo inyectamos el servicio para mantener el controlador limpio
+        public VentaController(VentaService service)
         {
             _service = service;
-            _context = context;
         }
 
-        // 🔍 GET ventas
+        // 🔍 GET: api/Venta
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var ventas = await _context.Ventas
-                .Include(v => v.Detalles)
-                .ToListAsync();
-
+            var ventas = await _service.ObtenerTodas();
             return Ok(ventas);
         }
 
-        // 🔍 GET by ID
+        // 🔍 GET: api/Venta/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var venta = await _context.Ventas
-                .Where(v => v.Id == id)
-                .FirstOrDefaultAsync();
+            var venta = await _service.ObtenerPorId(id);
 
             if (venta == null)
-                return NotFound();
+                return NotFound(new { message = $"La venta con ID {id} no existe." });
 
             return Ok(venta);
         }
 
-        // ➕ POST
+        // ➕ POST: api/Venta
         [HttpPost]
-        public async Task<IActionResult> CrearVenta(VentaDTO dto)
+        public async Task<IActionResult> CrearVenta([FromBody] VentaDTO dto)
         {
-            var resultado = await _service.RegistrarVenta(dto);
+            // Validar campos obligatorios básicos
+            if (dto == null || dto.ClienteId <= 0 || dto.Detalles == null || dto.Detalles.Count == 0)
+            {
+                return BadRequest(new { message = "Advertencia: completar campos obligatorios." });
+            }
 
-            if (resultado.Contains("insuficiente") || resultado.Contains("no existe"))
-                return BadRequest(resultado);
+            try
+            {
+                var resultado = await _service.RegistrarVenta(dto);
 
-            return Ok(resultado);
+                // Manejo de errores de lógica de negocio (Stock, existencia)
+                if (resultado.Contains("insuficiente") || resultado.Contains("no existe"))
+                {
+                    return BadRequest(new { message = resultado });
+                }
+
+                // Si todo sale bien, retornamos un mensaje de éxito
+                return Ok(new { message = "Venta registrada con éxito", detalle = resultado });
+            }
+            catch (Exception ex)
+            {
+                // Loguear el error (opcional)
+                return StatusCode(500, new { message = "Error interno del servidor", error = ex.Message });
+            }
         }
     }
 }

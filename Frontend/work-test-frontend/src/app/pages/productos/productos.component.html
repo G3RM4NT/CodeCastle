@@ -1,0 +1,54 @@
+<div class="container mt-4">
+
+  <h3>Productos</h3>
+
+  <!-- FORMULARIO -->
+  <div class="card p-3 mb-4">
+    <input [(ngModel)]="producto.nombre" class="form-control mb-2" placeholder="Nombre">
+    <input [(ngModel)]="producto.descripcion" class="form-control mb-2" placeholder="Descripción">
+    <input [(ngModel)]="producto.precioUnitario" type="number" class="form-control mb-2" placeholder="Precio">
+    <input [(ngModel)]="producto.stock" type="number" class="form-control mb-2" placeholder="Stock">
+
+    <button type="button" class="btn btn-success" (click)="guardar()">
+      {{ editando ? 'Actualizar' : 'Guardar' }}
+    </button>
+
+    <!-- BOTÓN CANCELAR -->
+    <button *ngIf="editando" type="button" class="btn btn-secondary ms-2" (click)="reset()">
+      Cancelar
+    </button>
+  </div>
+
+  <!-- TABLA -->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of productos">
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.precioUnitario }}</td>
+        <td>{{ p.stock }}</td>
+
+        <td>
+          <!-- EDITAR -->
+          <button type="button" class="btn btn-warning btn-sm me-2" (click)="editar(p)">
+            Editar
+          </button>
+
+          <!-- 🔥 CORREGIDO: ahora sí llama a eliminar -->
+          <button type="button" class="btn btn-danger btn-sm" (click)="eliminar(p.id)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

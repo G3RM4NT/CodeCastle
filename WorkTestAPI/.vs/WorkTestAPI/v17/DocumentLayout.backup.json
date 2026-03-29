@@ -3,28 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\services\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:services\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\dtos\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:dtos\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\worktestapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:worktestapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\worktestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:worktestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,18 +87,6 @@
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\reportecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\services\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:services\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\dtos\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:dtos\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,32 +95,8 @@
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\worktestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:worktestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|c:\\users\\german g\\desktop\\codecastle\\worktestapi\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BF4A353-6BF4-4D01-8797-5DC47C1B66AA}|WorkTestAPI.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -115,6 +127,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T23:34:10.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-28T19:21:41.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WorkTestAPI.http",
+              "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\WorkTestAPI.http",
+              "RelativeDocumentMoniker": "WorkTestAPI.http",
+              "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\WorkTestAPI.http",
+              "RelativeToolTip": "WorkTestAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-03-28T05:51:50.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Models\\Usuario.cs",
@@ -126,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -144,13 +195,14 @@
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Services\\AuthService.cs",
               "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAhwDUAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAhwDUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T03:18:56.953Z"
+              "WhenOpened": "2026-03-28T03:18:56.953Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\DTOS\\LoginDTO.cs",
               "RelativeDocumentMoniker": "DTOS\\LoginDTO.cs",
@@ -162,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 20,
               "Title": "ReporteController.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\ReporteController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReporteController.cs",
@@ -174,43 +226,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "VentaController.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\VentaController.cs",
               "RelativeDocumentMoniker": "Controllers\\VentaController.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\VentaController.cs",
               "RelativeToolTip": "Controllers\\VentaController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwDoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwBQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T02:47:50.353Z"
+              "WhenOpened": "2026-03-28T02:47:50.353Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "VentaService.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Services\\VentaService.cs",
               "RelativeDocumentMoniker": "Services\\VentaService.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Services\\VentaService.cs",
               "RelativeToolTip": "Services\\VentaService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwCwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswBgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T02:46:30.049Z"
+              "WhenOpened": "2026-03-28T02:46:30.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "VentaDTO.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\DTOS\\VentaDTO.cs",
               "RelativeDocumentMoniker": "DTOS\\VentaDTO.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\DTOS\\VentaDTO.cs",
               "RelativeToolTip": "DTOS\\VentaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T02:45:51.254Z"
+              "WhenOpened": "2026-03-28T02:45:51.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "CompraController.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\CompraController.cs",
               "RelativeDocumentMoniker": "Controllers\\CompraController.cs",
@@ -222,19 +277,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 9,
               "Title": "ProductosController.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\ProductosController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductosController.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Controllers\\ProductosController.cs",
               "RelativeToolTip": "Controllers\\ProductosController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwAgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T04:22:47.45Z"
+              "WhenOpened": "2026-03-27T04:22:47.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 15,
               "Title": "WorkTestAPI.csproj",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\WorkTestAPI.csproj",
               "RelativeDocumentMoniker": "WorkTestAPI.csproj",
@@ -246,45 +302,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-27T03:41:36.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T03:41:36.859Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAHQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAxwIUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T03:25:32.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA7wCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:24:25.725Z"
+              "WhenOpened": "2026-03-27T03:24:25.725Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "VentaDetalle.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\VentaDetalle.cs",
               "RelativeDocumentMoniker": "Models\\VentaDetalle.cs",
@@ -292,23 +348,25 @@
               "RelativeToolTip": "Models\\VentaDetalle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:23:26.331Z"
+              "WhenOpened": "2026-03-27T03:23:26.331Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
               "Title": "Venta.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Venta.cs",
               "RelativeDocumentMoniker": "Models\\Venta.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Venta.cs",
               "RelativeToolTip": "Models\\Venta.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:23:03.383Z"
+              "WhenOpened": "2026-03-27T03:23:03.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
               "Title": "CompraDetalle.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\CompraDetalle.cs",
               "RelativeDocumentMoniker": "Models\\CompraDetalle.cs",
@@ -320,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "Compra.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Compra.cs",
               "RelativeDocumentMoniker": "Models\\Compra.cs",
@@ -332,19 +390,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 7,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "Models\\Cliente.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Cliente.cs",
               "RelativeToolTip": "Models\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:20:33.045Z"
+              "WhenOpened": "2026-03-27T03:20:33.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "Proveedor.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Proveedor.cs",
               "RelativeDocumentMoniker": "Models\\Proveedor.cs",
@@ -356,15 +415,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 10,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Producto.cs",
               "RelativeDocumentMoniker": "Models\\Producto.cs",
               "ToolTip": "C:\\Users\\German G\\Desktop\\CodeCastle\\WorkTestAPI\\Models\\Producto.cs",
               "RelativeToolTip": "Models\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T03:18:23.85Z"
+              "WhenOpened": "2026-03-27T03:18:23.85Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\WorkTestAPI",
-    "\\WorkTestAPI\\Controllers",
-    "\\WorkTestAPI\\Data",
-    "\\WorkTestAPI\\Models"
+    ""
   ],
-  "SelectedNode": "\\WorkTestAPI\\appsettings.json",
+  "SelectedNode": "\\WorkTestAPI.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,53 @@
+<div class="container mt-4">
+
+  <!-- HEADER -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Dashboard</h2>
+    <button class="btn btn-danger" (click)="logout()">Cerrar sesión</button>
+  </div>
+
+  <!-- BIENVENIDA -->
+  <div class="alert alert-primary text-center">
+    Bienvenido al sistema de gestión Prueba Code Castle
+  </div>
+
+  <!-- CARDS -->
+  <div class="row g-4 mt-3">
+
+    <!-- PRODUCTOS -->
+    <div class="col-md-4">
+      <div class="card shadow text-center p-3">
+        <h4>Productos</h4>
+        <p>Gestiona inventario</p>
+        <button class="btn btn-primary" (click)="goToProductos()">Ir</button>
+      </div>
+    </div>
+
+    <!-- VENTAS -->
+    <div class="col-md-4">
+      <div class="card shadow text-center p-3">
+        <h4>Ventas</h4>
+        <p>Registra ventas</p>
+        <button class="btn btn-success" (click)="goToVentas()">Ir</button>
+      </div>
+    </div>
+
+    <!-- COMPRAS -->
+    <div class="col-md-4">
+      <div class="card shadow text-center p-3">
+        <h4>Compras</h4>
+        <p>Controla compras</p>
+        <button class="btn btn-warning" (click)="goToCompras()">Ir</button>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow text-center p-3">
+        <h4>Reporte de ventas</h4>
+        <p>Gestiona tus ventas realizadas</p>
+        <button class="btn btn-warning" (click)="goToReporteVenta()">Ir</button>
+      </div>
+    </div>
+
+  </div>
+</div>
