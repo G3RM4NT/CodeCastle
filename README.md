@@ -1,6 +1,19 @@
 WorkTestAPI - Sistema de Gestión Full Stack
 Este proyecto es una solución integral diseñada para la gestión de ventas, compras y productos. El sistema se compone de una API REST desarrollada en .NET con arquitectura en capas y una interfaz web moderna en Angular.
 
+Requisitos Previos
+
+Antes de ejecutar el proyecto, asegúrese de contar con las siguientes herramientas instaladas:
+
+Node.js versión 20.x o superior (requerido para Angular CLI)
+Angular CLI
+.NET 8 o superior
+SQL Server
+
+Importante:
+El proyecto frontend está desarrollado con Angular 17+, el cual requiere obligatoriamente Node.js v20.19 o superior.
+Si se utiliza una versión anterior (como Node 18), la aplicación no podrá ejecutarse y mostrará errores al iniciar con ng serve.
+
 Tecnologías y Paquetes
 Justificación Tecnológica
 La elección de Angular para el frontend y SQL Server para la persistencia de datos se debe a que son las tecnologías que el desarrollador domina por completo, permitiendo una implementación eficiente, escalable y alineada con los estándares actuales de desarrollo.
@@ -41,6 +54,8 @@ Ejecute el script proporcionado para generar las tablas e insertar los datos ini
 
 2. Configuración del Backend
 Configurar la conexión: Edite el archivo appsettings.json con su cadena de conexión local apuntando a la base de datos Work-Test.
+
+"DefaultConnection": "Server=.;Database=Work-Test;Trusted_Connection=True;TrustServerCertificate=True;"
 
 Iniciar la API: Ejecute el comando dotnet run en la carpeta del proyecto.
 
